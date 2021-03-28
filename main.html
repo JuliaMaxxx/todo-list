@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Planner </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="main_page">
+    <header class="main_header">
+        <form action="menu.html">
+            <button> <img src="images/menu.png" alt="menu"> </button> <!--меню-->
+        </form>
+        <p> Smart.Planner </p>
+        <form action="calendar.html">
+            <button> <img src="images/calendar.png" alt="calendar"> </button> <!--календарь-->
+        </form>
+    </header>
+    <main >
+        <h1> Today(3/7) </h1>
+        <progress max="100" value="40"></progress> <!--прогресс-->
+
+        <ul class="today_tasks"> <!--список задач-->
+                <li> Писать диплом </li>
+                <li> Накормить кота </li>
+                <li> Дочитать книгу </li>
+                <li> Завершить проект </li>
+                <li> Еще что-то </li>
+        </ul> 
+
+        <form action="add_task.html">
+            <button> Добавить </button>
+        </form>
+    </main>
+
+    <footer>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+@font-face {
+    font-family: Sh; /* Имя шрифта */
+    src: url(fonts/ShEuropaUngarisch.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Roboto; /* Имя шрифта */
+    src: url(fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Roboto; /* Имя шрифта */
+    src: url(fonts/Roboto-Medium.ttf); /* Путь к файлу со шрифтом */
+    font-weight: 500;
+}
+
+
+h1, p {
+    font-family: Sh;
+    font-style: normal;
+    text-align: left;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    display: block;
+    position: relative; /* Относительное позиционирование */
+    left: -10%;
+    margin-top: 5px;
+}
+
+h1{
+    font-size: 48px;
+    letter-spacing: 0.03em;
+    margin-left: 7%;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100% !important;
+    background-color: #FFFFFF;
+    min-width: 320px;
+    max-width: 420px;
+    height: 100%;
+}
+
+img {
+    width: 1.2em;
+}
+
+button {
+    font-family: Roboto;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+}
+
+.main_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.add_task_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.add_task_header > form > button {
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+}
+
+.calendar_body > header {
+    width: 100%;
+    padding-top: 3em;
+}
+
+header > form > button {
+    background: none;
+    border: none;
+}
+
+.main_page {
+    background: url(images/main_pic.png) no-repeat;
+    background-size: cover;
+    min-height: 460px;
+    position: relative;
+    background-position-x: 40%;
+    background-position-y: 0px; /* Положение фона */
+}
+
+.add_task_body {
+    background: url(images/add_task_background.png) no-repeat;
+    background-size: cover;
+    min-height: 460px;
+    position: relative;
+    background-position-x: 100%;
+}
+
+.calendar_body{
+    background: url(images/calendar_background.png) no-repeat;
+    background-size: cover;
+    min-height: 460px;
+    position: relative;
+    background-position-x: 40%;
+    background-position-y: -20px; /* Положение фона */
+}
+
+ul.today_tasks > li {
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 35px;
+    list-style-type: none;
+    text-indent: -0.6em;
+    font-size: 20px;
+}
+
+ul.today_tasks > li::before {
+    content: '\25ef'; /* Добавляем маркер в шестнадцатеричном формате*/ 
+    color: rgb(20, 20, 20);
+}
+
+ul.today_tasks > li::after {
+    content: url(images/delete.png); /* Добавляем маркер в шестнадцатеричном формате*/ 
+    position: absolute;
+    right: 7%;
+    padding: 0;
+}
+
+ul.today_tasks {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.8em 0 3em 10% ;
+    margin: 0;
+    min-height: 250px;
+}
+
+ul.today_tasks > li.done {
+    color:#5E5E5E;
+}
+  
+ul.today_tasks > li.done::before {
+    content: url(images/done.png);
+    width: 1em;
+    color:#F78131;
+}
+
+progress {
+    display: block;
+    width: 85%;
+    height: 11px; 
+	position: relative;
+	background-color: #FFFFFF;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid #000000;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #FFFFFF;
+}
+
+progress::-webkit-progress-value {
+    background-color: #FF6634;
+}
+
+main > form > button {
+    display: block;
+    position: relative;
+    width: 85%;
+    height: 58px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 auto 10% auto;
+}
+
+.calendar_body > header > form > button {
+    margin-left: 82%;
+}
+
+ul.calendar-dates,
+ul.calendar-week-days {
+    font-size: 17px;
+    font-family: Roboto;
+    font-style: normal;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 0px;
+	padding: 0 5% 0 5%;
+    list-style: none !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+ul.calendar-week-days {
+    margin-top: 0.5em !important;
+}
+
+ul.calendar-week-days > li::before {
+    content: none !important;
+}
+
+ul.calendar-week-days > li {
+    padding: 0.2em 0.2em 0.5em;
+	text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    text-indent: 0em;
+}
+
+ul.calendar-week-days > li {
+	padding: 0.2em 0.2em 0.5em;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+ul.calendar-dates > li {
+	padding: 0.7em;
+    font-family: Sh;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+ul.calendar-dates > li.today {
+	outline: 2px solid red;
+}
+
+ul.calendar-dates > li.other-month {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+main.add_task_main > form > ul > li::before {
+    content: none !important;
+}
+
+.add_task_main > form > ul {
+    padding-left: 7% !important;
+    padding-bottom: 10%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.add_task_main > form> ul> li {
+    display: block;
+    margin: 0;
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 35px;
+    list-style-type: none;
+    text-indent: 0em;
+    font-size: 20px;
+}
+
+input[type="text"], input[type="date"], textarea {
+    background: #FFFFFF;
+    border: 1.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 42px; 
+    width: 92%;
+    color: #070707; 
+    font-size: 18px;
+    font-family: Roboto; 
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+input[type="color"] {
+    border: 1.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 30px; 
+    font-weight: 300;
+    position: absolute;
+    right: 7%;
+}
+
+textarea {
+    height: 120px; 
+}
+
+.menu {
+    display: block;
+    width: 100%;
+    position: absolute; 
+    top: 40%;        
+    transform: translate(0, -50%) 
+}
+  
+.menu > form > button, footer > form > button {
+    background: none;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300 !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;;
+}
+
+.nav {
+    display: flex;
+    padding-top: 3em;
+    margin-right: 7%;
+}
+
+.nav > form > button {
+    background: none;
+    border: none;
+    padding-left: 1.5em;
+}
+
+.nav > form > button > img {
+    width: 11px;
+    height: 18px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    /* Выравнивание элементов шапки с начала (по левому краю). */
+    align-items: flex-start;
+    justify-content: space-between;
+    background: none !important;
+    margin-top: 1em;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}

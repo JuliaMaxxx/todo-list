@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Planner </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="add_task_body">
+    <header class="add_task_header">
+        <form action="main.html">
+            <button> <img src="images/close.png" alt="menu"> </button> <!--меню-->
+        </form>
+        <form action="calendar.html">
+            <button> <img src="images/calendar.png" alt="calendar"> </button> <!--календарь-->
+        </form>
+    </header>
+
+    <main class="add_task_main">
+        <h1> Add task </h1> 
+        <form>
+            <ul>
+                <li> 
+                    <label for="title"> Название </label> <br>
+                    <input type="text" id="title" required>
+                </li>
+                <li>
+                    <label for="description"> Описание* </label> <br>
+                    <textarea type="text" id="description" rows="5"></textarea> 
+                </li>
+                <li>
+                    <input type="date" id="datetime">
+                </li>
+                <li>
+                    <input type="hidden" id="color_choice" value="">
+                    <label for="highlight"> Выделение </label> 
+                    <input type="color" value="цвет" name="имя">
+                </li>
+            </ul>
+        </form>
+    
+        <form action="main.html">
+            <button> Создать </button>
+        </form>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
