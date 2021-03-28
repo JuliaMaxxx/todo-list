@@ -42,7 +42,7 @@ h1{
 }
 
 html, body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     min-height: 100% !important;
     background-color: #FFFFFF;
@@ -302,9 +302,7 @@ textarea {
 .menu {
     display: block;
     width: 100%;
-    position: absolute; 
-    top: 40%;        
-    transform: translate(0, -50%) 
+    padding-top: 20%;
 }
   
 .menu > form > button, footer > form > button {
